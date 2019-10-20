@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MyApp(),
+    MaterialApp(
+      home: Mi_card(),
+    ),
   );
 }
 
-class MyApp extends StatelessWidget {
+class Mi_card extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -69,21 +71,55 @@ class MyApp extends StatelessWidget {
               Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
                 child: ListTile(
-                    leading: Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'fonkamloic@gmail.com',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
                     ),
-                    title: Text(
-                      'fonkamloic@gmail.com',
-                      style: TextStyle(
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20.0,
-                      ),
-                    )),
+                  ),
+                ),
               ),
+              SizedBox(
+                height: 30,
+              ),
+              RaisedButton(
+                child: Text('Continue'),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => DicePage()));
+                },
+                color: Colors.teal.shade100,
+                textColor: Colors.teal.shade900,
+                padding: EdgeInsets.all(20),
+                splashColor: Colors.teal.shade400,
+              )
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class DicePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Dicee"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: Text('Go back!'),
         ),
       ),
     );
