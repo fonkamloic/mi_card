@@ -13,61 +13,76 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.teal,
-        body: Center(
-          child: SafeArea(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                CircleAvatar(
-                  radius: 60.0,
-                  backgroundImage: AssetImage(
-                    "assets/images/loic.jpg",
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 60.0,
+                backgroundImage: AssetImage(
+                  "assets/images/loic.jpg",
+                ),
+              ),
+              Text(
+                'Fonkam Loic',
+                style: TextStyle(
+                  fontFamily: 'Zhi',
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 24.0,
+                  color: Colors.teal.shade900,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+                width: 150,
+                child: Divider(
+                  color: Colors.teal.shade900,
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    '+237 699549092',
+                    style: TextStyle(
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 20.0,
+                    ),
                   ),
                 ),
-                Row(
-                  children: <Widget>[
-                    Text(
-                      'Fonkam Loic',
-                      style: TextStyle(
-                        fontFamily: 'Zhi',
-                        fontSize: 40.0,
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal,
                     ),
-                  ],
-                ),
-                Row(
-                  children: <Widget>[
-                    Text(
-                      'FLUTTER DEVELOPER',
+                    title: Text(
+                      'fonkamloic@gmail.com',
                       style: TextStyle(
+                        color: Colors.teal.shade900,
                         fontFamily: 'SourceSansPro',
-                        fontSize: 24.0,
-                        color: Colors.grey,
-                        fontWeight: FontWeight.bold,
+                        fontSize: 20.0,
                       ),
-                    ),
-                  ],
-                ),
-                TextFormField(
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
-                ),
-                TextFormField(
-                  validator: (value) {
-                    if (value.isEmpty) {
-                      return 'Please enter some text';
-                    }
-                    return null;
-                  },
-                )
-              ],
-            ),
+                    )),
+              ),
+            ],
           ),
         ),
       ),
