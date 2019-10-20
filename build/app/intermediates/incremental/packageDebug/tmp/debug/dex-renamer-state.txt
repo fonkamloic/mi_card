@@ -1,4 +1,4 @@
-#Wed Oct 16 03:02:22 CEST 2019
+#Sun Oct 20 07:22:51 CEST 2019
 base.0=/home/fl/Dropbox/github_projects/FlutterProject/mi_card_flutter/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex
